@@ -16,13 +16,36 @@ Content-Type: application/json
 GET http://localhost:3000/assets
 
 ###
-GET http://localhost:3000/assets/AMZN
+GET http://localhost:3000/assets/NVDA
 
 ###
-PATCH http://localhost:3000/assets/AMZN
+PATCH http://localhost:3000/assets/NVDA
+Content-Type: application/json
+
+{
+    "name": "NVidea",
+    "symbol": "NVDA",
+    "price": 102,
+    "image": "NVDA.png"
+}
 
 ###
-DELETE http://localhost:3000/assets/AMZN
+DELETE http://localhost:3000/assets/NVDA
+
+
+
+
+###
+POST http://localhost:3000/assets/NVDA/dailies
+Content-Type: application/json
+
+{
+  "date": "2025-02-26",
+  "price": 200
+}
+
+###
+GET http://localhost:3000/assets/NVDA/dailies
 
 
 
